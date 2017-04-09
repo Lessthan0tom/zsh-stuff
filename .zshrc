@@ -13,7 +13,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 #antigen bundle $ZSHA_BASE/bundles/stv
 
-antigen theme $ZSHA_BASE/themes/tomclark-edited-prose
+
+antigen theme https://github.com/Lessthan0tom/zsh-stuff themes/tomclark-edited-prose
 
 antigen apply
 

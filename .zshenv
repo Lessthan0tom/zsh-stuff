@@ -3,4 +3,4 @@ export NVM_DIR="$HOME/.nvm"
 
 
 #nvm use stable > /dev/null
-nvm use --lts > /dev/null
+nvm use default > /dev/null

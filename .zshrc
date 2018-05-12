@@ -18,8 +18,29 @@ antigen theme https://github.com/Lessthan0tom/zsh-stuff themes/tomclark-edited-p
 
 antigen apply
 
+# xdg-open in new subprocess
+function open () {
+    xdg-open "$*" &
+}
 
-# some more ls aliases
+
+
+# ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# linux clipboard aliases
+
+
+alias setclip='xclip -selection c'
+alias getclip='xclip -selection clipboard -o'
+
+
+#Android Dev stuff
+
+export ANDROID_HOME=${HOME}/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

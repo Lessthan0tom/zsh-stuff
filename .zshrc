@@ -30,9 +30,11 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# Random user bins
+export PATH=${PATH}:${HOME}/bin
+
+
 # linux clipboard aliases
-
-
 alias setclip='xclip -selection c'
 alias getclip='xclip -selection clipboard -o'
 

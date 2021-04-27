@@ -31,13 +31,13 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Random user bins
-export PATH=${PATH}:${HOME}/bin
+export PATH=${PATH}:${HOME}/bin:${HOME}/.local/bin
 
 
 # linux clipboard aliases
 alias setclip='xclip -selection c'
 alias getclip='xclip -selection clipboard -o'
-
+alias k='kubectl'
 
 #Android Dev stuff
 

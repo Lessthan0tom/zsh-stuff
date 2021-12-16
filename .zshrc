@@ -5,7 +5,7 @@ antigen use oh-my-zsh
 antigen bundle git
 
 if [ "$OSTYPE"="darwin11.0" ]; then
-  antigen bundle osx
+  antigen bundle macos
 fi
 
 #antigen bundle vagrant

@@ -50,4 +50,9 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 # Docker stuff
 
 export PATH=/usr/bin:$PATH
-export DOCKER_HOST=unix:///run/user/1000/docker.sock
+# If not WSL
+if [[ $(uname -r) =~ WSL ]]; then
+  # You might want to put WSL specific stuff here
+else
+  export DOCKER_HOST=unix:///run/user/1000/docker.sock
+fi

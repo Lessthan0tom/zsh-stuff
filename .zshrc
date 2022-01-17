@@ -45,8 +45,9 @@ export PATH=/usr/bin:$PATH
 
 # If WSL
 if [[ $(uname -r) =~ WSL ]]; then
-  alias subl="subl.exe"
+  alias cmd="cmd.exe"
   alias open="explorer.exe"
+  alias subl="subl.exe"
 
   alias setclip="clip.exe"
   alias getclip="powershell.exe /c Get-Clipboard"

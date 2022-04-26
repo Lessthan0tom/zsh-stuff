@@ -51,6 +51,12 @@ if [[ $(uname -r) =~ WSL ]]; then
 
   alias setclip="clip.exe"
   alias getclip="powershell.exe /c Get-Clipboard"
+
+
+  # As per:
+  # https://github.com/MicrosoftDocs/terminal/blob/dev/migrie/duplicate-path/TerminalDocs/tutorials/new-tab-same-directory.md
+  PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"'
+  precmd() { eval "$PROMPT_COMMAND" }
 else
   function open () {
     # xdg-open in new subprocess
@@ -62,3 +68,5 @@ else
 
   export DOCKER_HOST=unix:///run/user/1000/docker.sock
 fi
+
+PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"'

@@ -47,11 +47,15 @@ export PATH=/usr/bin:$PATH
 if [[ $(uname -r) =~ WSL ]]; then
   alias cmd="cmd.exe"
   alias open="explorer.exe"
+
   alias subl="subl.exe"
+  alias nmap="nmap.exe"
+  alias adb="adb.exe"
+  alias scrcpy="scrcpy.exe"
+  alias arp="arp.exe"
 
   alias setclip="clip.exe"
   alias getclip="powershell.exe /c Get-Clipboard"
-
 
   # As per:
   # https://github.com/MicrosoftDocs/terminal/blob/dev/migrie/duplicate-path/TerminalDocs/tutorials/new-tab-same-directory.md

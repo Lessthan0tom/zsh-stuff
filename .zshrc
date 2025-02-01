@@ -61,6 +61,11 @@ if [[ $(uname -r) =~ WSL ]]; then
   # https://github.com/MicrosoftDocs/terminal/blob/dev/migrie/duplicate-path/TerminalDocs/tutorials/new-tab-same-directory.md
   PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"'
   precmd() { eval "$PROMPT_COMMAND" }
+# If Mac OS
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  # open already a thing in Mac OS
+
+# If regular Linux
 else
   function open () {
     # xdg-open in new subprocess

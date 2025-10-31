@@ -45,6 +45,8 @@ export PATH=/usr/bin:$PATH
 
 # If WSL
 if [[ $(uname -r) =~ WSL ]]; then
+  export PATH=/snap/bin:$PATH
+
   alias cmd="cmd.exe"
   alias open="explorer.exe"
 
